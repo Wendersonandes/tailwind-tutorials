@@ -1,4 +1,16 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+
+.btn{
+	@apply inline-block px-4 py-3 rounded-lg focus:outline-none focus:ring  text-sm text-white uppercase tracking-wider font-semibold;
+}
+
+.btn-indigo{
+	@apply bg-indigo-500 hover:bg-indigo-400 active:bg-indigo-600 text-white;
+}
+
+.btn-gray{
+	@apply bg-gray-400 hover:bg-gray-300 active:bg-gray-600 text-gray-800;
+}
 @import "tailwindcss/utilities";
 
