@@ -6,7 +6,8 @@ const chokidar = require('chokidar')
 environment.config.devServer.before = (app, server) => {
   chokidar.watch([
     'config/locales/*.yml',
-    'app/views/**/*.erb'
+    'app/views/**/*.erb',
+    'app/components/*.erb'
   ]).on('change', () => server.sockWrite(server.sockets, 'content-changed'))
 }
 
