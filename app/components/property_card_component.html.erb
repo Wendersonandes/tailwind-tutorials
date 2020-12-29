@@ -1,17 +1,19 @@
 <div class="bg-white border rounded-lg overflow-hidden">
   <img src="<%= @imageUrl %>" alt="<%= @imageAlt %>">
   <div class="p-6">
-    <h4><%= @title  %></h4>
-    <div>
+    <div class="text-gray-600 text-xs uppercase font-semibold tracking-wide">
       <%= @beds %> beds &bull; <%= @baths %> baths
     </div>
+    <h4 class="font-semibold text-lg leading-tight truncate"><%= @title  %></h4>
 
-    <div>
-      <%= @formattedPrice %> / wk
+    <div class="mt-1">
+      <%= @formattedPrice %> 
+      <span class="text-gray-600 text-sm">/ wk</span>
     </div>
 
-    <div>
-      <%= "#{ @rating }  / 5 stars (based on #{ @reviewCount } reviews)" %>
+    <div class="mt-4">
+      <span class="text-teal-600 font-semibold"><%= "#{@rating} / 5 stars" %></span>
+      <span class="text-gray-600 text-sm"><%= "(based on #{ @reviewCount } reviews)" %></span>
     </div>
   </div>
 </div>
