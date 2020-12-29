@@ -8,5 +8,6 @@ class CardComponent < ViewComponent::Base
     @imageUrl = item[:imageUrl]
     @propertyCount = item[:propertyCount]
     @imageAlt = item[:imageAlt]
+    @item = item
   end
 end
