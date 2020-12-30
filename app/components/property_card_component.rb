@@ -12,4 +12,8 @@ class PropertyCardComponent < ViewComponent::Base
     @reviewCount = reviewCount
     @rating = rating
   end
+
+  def star_class(i, rating)
+    i <= rating ? "text-teal-500" : "text-gray-400"
+  end
 end
