@@ -10,38 +10,38 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "menu", "menuIcon", "button" ]
+  static targets = [ "menu", "closeIcon", "pileIcon" ]
 	static classes = ["hide", "reveal"]
-	static values = { isOpen: Boolean, closeIcon: String, pileIcon: String }
+	static values = { isOpen: Boolean }
 
   connect() {
 		this.set_classes()
-		this.set_menu_icon()
   }
 
 	toggle(){
 		this.isOpenValue = !this.isOpenValue
 		this.set_classes()
-		this.set_menu_icon()
 	}
 
 	set_classes(){
 		if(this.isOpenValue){
-			this.menuTarget.classList.add(this.revealClass)
-			this.menuTarget.classList.remove(this.hideClass)
+			this.reveal(this.closeIconTarget)
+			this.reveal(this.menuTarget)
+			this.hide(this.pileIconTarget)
 		}else{
-			this.menuTarget.classList.add(this.hideClass)
-			this.menuTarget.classList.remove(this.revealClass)
+			this.reveal(this.pileIconTarget)
+			this.hide(this.closeIconTarget)
+			this.hide(this.menuTarget)
 		}
 	}
 
-	set_menu_icon(){
-		let html = ""
-		if(this.isOpenValue){
-			html = document.getElementById(this.pileIconValue).innerHTML
-		}else{
-			html = document.getElementById(this.closeIconValue).innerHTML
-		}
-		this.menuIconTarget.innerHTML = html
+	reveal(el){
+		el.classList.add(this.revealClass)
+		el.classList.remove(this.hideClass)
+	}
+
+	hide(el){
+		el.classList.add(this.hideClass)
+		el.classList.remove(this.revealClass)
 	}
 }

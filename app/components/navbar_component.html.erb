@@ -9,9 +9,10 @@
   <div class="flex items-center justify-between px-4 py-3">
     <div><img class="h-8" src="<%= asset_path('logo-inverted.svg') %>" alt=""></div>
     <div>
-      <button type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none" data-toggle-menu-target="button" data-action="toggle-menu#toggle">
-        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" data-toggle-menu-target="menuIcon">
-          <path fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+      <button type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none" data-action="toggle-menu#toggle">
+        <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+          <path class="hidden" data-toggle-menu-target="closeIcon" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+          <path class="block" data-toggle-menu-target="pileIcon" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
         </svg>
       </button>
     </div>
@@ -22,11 +23,4 @@
     <a href="#" class="block px-2 rounded hover:bg-gray-800">Trips</a>
     <a href="#" class="block px-2 rounded hover:bg-gray-800">Messages</a>
   </div>
-
-  <template id="close-icon">
-    <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-  </template>
-  <template id="pile-icon">
-    <path fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-  </template>
 </header>
