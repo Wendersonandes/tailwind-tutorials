@@ -1,13 +1,13 @@
-<header class="bg-gray-900" 
+<header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3" 
         data-controller="toggle-menu"
         data-toggle-menu-hide-class="hidden"
         data-toggle-menu-reveal-class="block"
         data-toggle-menu-is-open-value="false"
         >
-  <div class="flex items-center justify-between px-4 py-3">
+  <div class="flex items-center justify-between px-4 py-3 sm:p-0">
     <div><img class="h-8" src="<%= asset_path('logo-inverted.svg') %>" alt=""></div>
     <div>
-      <button type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none" data-action="toggle-menu#toggle">
+      <button type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none sm:hidden" data-action="toggle-menu#toggle">
         <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
           <path class="hidden" data-toggle-menu-target="closeIcon" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
           <path class="block" data-toggle-menu-target="pileIcon" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
@@ -16,7 +16,7 @@
     </div>
   </div>
 
-  <div class="text-white font-semibold px-2 pt2 pb-4 hidden" data-toggle-menu-target="menu">
+  <div class="text-white font-semibold px-2 pt2 pb-4 hidden sm:ml-2 sm:p-0 sm:flex sm:justify-between" data-toggle-menu-target="menu">
     <a href="#" class="block px-2 rounded hover:bg-gray-800">List your property</a>
     <a href="#" class="block px-2 rounded hover:bg-gray-800">Trips</a>
     <a href="#" class="block px-2 rounded hover:bg-gray-800">Messages</a>
