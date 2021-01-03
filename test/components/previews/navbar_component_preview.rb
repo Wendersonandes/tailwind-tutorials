@@ -1,5 +1,5 @@
 class NavbarComponentPreview < ViewComponent::Preview
-  def default
+  def responsive_navbar
     render(NavbarComponent.new())
   end
 end
