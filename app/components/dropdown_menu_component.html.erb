@@ -1,6 +1,15 @@
-<div class="relative ml-6">
-  <button class="block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600 focus:outline-none focus:border-white"><img src="<%= asset_path('avatar') %>" alt="" class="h-full w-full object-cover"></button>
-  <nav class="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl">
+<div class="relative ml-6" 
+     data-controller="toggle-dropdown"
+     data-toggle-dropdown-hide-class="hidden"
+     data-toggle-dropdown-reveal-class="block"
+     data-toggle-dropdown-is-open-value="false"
+     >
+  <button class="relative z-10 block h-8 w-8 rounded-full overflow-hidden border-2 border-gray-600 focus:outline-none focus:border-white" data-action="toggle-dropdown#toggle">
+    <img src="<%= asset_path('avatar') %>" alt="" class="h-full w-full object-cover">
+  </button>
+
+  <button class="fixed inset-0 w-full h-full bg-black opacity-50 cursor-default hidden" tabindex="-1" data-action="toggle-dropdown#toggle" data-toggle-dropdown-target="closer"></button>
+  <nav class="absolute right-0 w-48 py-2 mt-2 bg-white rounded-lg shadow-xl" data-toggle-dropdown-target="menu">
     <ul class="text-gray-800 font-semibold">
       <li class="px-4 py-2 hover:bg-indigo-500 hover:text-white"><a href="#">Account</a></li>
       <li class="px-4 py-2 hover:bg-indigo-500 hover:text-white"><a href="#">Settings</a></li>
