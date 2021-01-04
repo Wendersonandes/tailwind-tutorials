@@ -16,10 +16,34 @@
     </div>
   </div>
 
-  <div class="text-white font-semibold px-2 pt2 pb-4 hidden sm:ml-2 sm:p-0 sm:flex sm:justify-between" data-toggle-menu-target="menu">
-    <a href="#" class="block px-2 rounded hover:bg-gray-800">List your property</a>
-    <a href="#" class="block px-2 rounded hover:bg-gray-800">Trips</a>
-    <a href="#" class="block px-2 rounded hover:bg-gray-800">Messages</a>
-    <%= render(DropdownMenuComponent.new()) %>
-  </div>
+  <nav class="hidden sm:block" data-toggle-menu-target="menu">
+    <ul class="text-white font-semibold px-2 pt2 pb-4 sm:ml-2 sm:p-0 sm:flex sm:justify-between">
+      <li class="px-2 rounded hover:bg-gray-800"><a href="#">List your property</a></li>
+      <li class="px-2 rounded hover:bg-gray-800"><a href="#">Trips</a></li>
+      <li class="px-2 rounded hover:bg-gray-800"><a href="#">Messages</a></li>
+      <li>
+        <%= render(DropdownMenuComponent.new()) %>
+      </li>
+    </ul>
+    
+
+    <div class="px-4 py-5 border-t border-gray-800 sm:hidden">
+      <div class="flex items-center">
+        <img src="<%= asset_path('avatar') %>" alt="" class="h-8 w-8 rounded-full border-2 border-gray-600 object-cover">
+        <div class="ml-3 text-white">
+          <span class="block font-semibold text-sm">John Doe</span>
+          <span class="block text-xs font-light">oldmaverick@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <ul class="text-gray-400">
+          <li class=""><a href="#">Account</a></li>
+          <li class="mt-2"><a href="#">Settings</a></li>
+          <li class="mt-2"><a href="#">Sign out</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </nav>
 </header>
